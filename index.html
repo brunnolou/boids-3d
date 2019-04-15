@@ -267,7 +267,7 @@
 			var hash = document.location.hash.substr(1);
 			if (hash) hash = parseInt(hash, 0);
 			/* TEXTURE WIDTH FOR SIMULATION */
-			var WIDTH = hash || 32;
+			var WIDTH = hash || 64;
 			var BIRDS = WIDTH * WIDTH;
 			// Custom Geometry - using 3 triangles each. No UVs, no normals currently.
 			THREE.BirdGeometry = function() {
@@ -339,7 +339,7 @@
 				return false;
 			}
 			var options = "";
-			for (i = 1; i < 7; i++) {
+			for (i = 1; i < 8; i++) {
 				var j = Math.pow(2, i);
 				options +=
 					'<a href="#" onclick="return change(' + j + ')">' + j * j + "</a> ";
